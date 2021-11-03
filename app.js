@@ -1,5 +1,7 @@
 const { errors } = require('celebrate');
 var createError = require('http-errors');
+const dotenv = require('dotenv');
+dotenv.config();
 var express = require('express');
 // DB CONNECTION START //
   var mongoose = require('mongoose');
@@ -9,6 +11,10 @@ var express = require('express');
   var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // END //
+
+
+
+
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
