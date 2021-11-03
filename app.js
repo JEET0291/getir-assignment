@@ -4,6 +4,7 @@ var express = require('express');
 // DB CONNECTION START //
   var mongoose = require('mongoose');
   var mongoDB = 'mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-xzwqd.mongodb.net/getir-case-study?retryWrites=true';
+  // var mongoDB = 'localhost:27017/jest_db';
   mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
   var db = mongoose.connection;
   db.on('error', console.error.bind(console, 'MongoDB connection error:'));
